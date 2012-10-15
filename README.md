@@ -22,7 +22,7 @@ class Soldier(rc : RobotController) extends Bot(rc)
 ```
 
 (2) Task manager. All robot behavior is governed by a priority queue,
-with semantics for eager yielding, redundancy filtering, and decay.
+with semantics for eager yielding, redundancy filtering, and timeout/decay.
 
 (3) Mutual exclusion semantics. All tasks use mutices to aquire critical robot resources (action, flux, energon).
 The result is freedom to compose different traits and differing task priorities.
