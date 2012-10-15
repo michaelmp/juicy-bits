@@ -5,7 +5,7 @@ A robot player for the MIT Battlecode game.
 
 Some notable features:
 
-(1) Scala + Java. A typical robot definition looks something like this:
+(1) Scala + Java. Java for performance-intensive code, Scala for experimental code. A typical robot definition looks something like this:
 
 ```scala
 package team133
