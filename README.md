@@ -21,11 +21,10 @@ class Soldier(rc : RobotController) extends Bot(rc)
   with RespondToDefendOrdersTrait
 ```
 
-Java for the performance-intensive parts (most), and Scala for the creative/experimental parts.
-In the above example, adding a behavior to a robot is as simple as adding a Scala trait.
-
 (2) Task manager. All robot behavior is governed by a priority queue,
 with semantics for eager yielding, redundancy filtering, and decay.
 
-(3) Mutual exclusion semantics. Arbitrary traits, and therefore arbitrary tasks, are capable of working
-together by respecting a set of mutices controlling critical robot resources (action, flux, energon).
+(3) Mutual exclusion semantics. All tasks use mutices to aquire critical robot resources (action, flux, energon).
+The result is freedom to compose different traits and differing task priorities.
+
+In the above example, adding a behavior to the Soldier robot is as simple as adding a Scala trait.
